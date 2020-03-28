@@ -6,7 +6,7 @@ const messageTwo = document.querySelector('#message-two')
 
 // search for weather
 document.querySelector('form').addEventListener('submit', (e) => {
-  e.preventDefault()
+  e.preventDefault();
 
   const userInput = e.target.elements.userSearch.value.toLowerCase()
 
