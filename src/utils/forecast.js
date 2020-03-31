@@ -18,8 +18,10 @@ const forecast = (lat, long, callback) => {
            
             const { temperature, precipProbability:rainProb } = body.currently
             const summary = body.daily.summary
+            const tempHigh = body.daily.data[0].temperatureHigh
+            const tempLow = body.daily.data[0].temperatureLow
 
-            const message = `${summary} It has ${temperature} degrees out. There is a ${rainProb}% chance of rain.`
+            const message = `${summary} It has ${temperature} degrees out, whereas the lowest T is ${tempLow} degrees and the highest is ${tempHigh} degrees. There is a ${rainProb}% chance of rain.`
 
             callback(undefined, message)
         }
